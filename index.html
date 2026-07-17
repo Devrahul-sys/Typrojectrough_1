@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAware | Air & Water Quality Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js CDN for Visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo-area">
+                <span class="icon">🌱</span>
+                <h2>EcoAware</h2>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active">📊 Overview</a>
+                <a href="#" class="nav-item">💨 Air Quality</a>
+                <a href="#" class="nav-item">💧 Water Quality</a>
+                <a href="#" class="nav-item">🌍 Regional Map</a>
+            </nav>
+            <div class="sidebar-footer">
+                <p>Team Project (4 Members)</p>
+            </div>
+        </aside>
+
+        <!-- Main Dashboard Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-title">
+                    <h1>Environmental Awareness Dashboard</h1>
+                    <p>Real-time public health monitoring analytics</p>
+                </div>
+                <div class="location-badge">
+                    📍 Navi Mumbai, MH
+                </div>
+            </header>
+
+            <!-- Status Metrics Cards Section -->
+            <section class="metrics-container">
+                <div class="metric-card card-aqi">
+                    <div class="card-header">
+                        <h3>Air Quality Index (AQI)</h3>
+                        <span class="badge status-good">Good</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="main-value">48</span>
+                        <span class="unit">AQI</span>
+                    </div>
+                    <div class="card-footer">Primary pollutant: PM2.5</div>
+                </div>
+
+                <div class="metric-card card-water">
+                    <div class="card-header">
+                        <h3>Water pH Balance</h3>
+                        <span class="badge status-optimal">Optimal</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="main-value">7.4</span>
+                        <span class="unit">pH</span>
+                    </div>
+                    <div class="card-footer">Neutral & safe drinking standard</div>
+                </div>
+
+                <div class="metric-card card-turbidity">
+                    <div class="card-header">
+                        <h3>Water Turbidity</h3>
+                        <span class="badge status-good">Clear</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="main-value">1.2</span>
+                        <span class="unit">NTU</span>
+                    </div>
+                    <div class="card-footer">Acceptable clarity threshold</div>
+                </div>
+            </section>
+
+            <!-- Data Visualizations Grid -->
+            <section class="charts-grid">
+                <!-- Air Quality Trend Chart -->
+                <div class="chart-wrapper">
+                    <div class="chart-header">
+                        <h3>24-Hour Air Pollutants Trend</h3>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="airTrendChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Water Quality Metric Breakdown -->
+                <div class="chart-wrapper">
+                    <div class="chart-header">
+                        <h3>Water Chemical Breakdown (DO vs. Minerals)</h3>
+                    </div>
+                    <div class="chart-body">
+                        <canvas id="waterCompositionChart"></canvas>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Script connection -->
+    <script src="app.js"></script>
+</body>
+</html>
